@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Bookmark Manager</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="w-96 h-[600px] bg-white dark:bg-gray-800">
+  <div class="p-4">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-xl font-bold text-gray-800 dark:text-white">Smart Bookmarks</h1>
+      <button id="toggleTheme" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <!-- Moon/Sun icon will be dynamically changed -->
+        </svg>
+      </button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="mb-4">
+      <input type="text" id="searchBar" 
+        class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 
+        bg-white dark:bg-gray-700 text-gray-800 dark:text-white"
+        placeholder="Search bookmarks...">
+    </div>
+
+    <!-- Categories -->
+    <div class="mb-4">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Categories</h2>
+        <button id="addCategory" class="text-blue-500 hover:text-blue-600">+ Add New</button>
+      </div>
+      <div id="categoriesList" class="space-y-2">
+        <!-- Categories will be dynamically added here -->
+      </div>
+    </div>
+
+    <!-- Bookmarks List -->
+    <div id="bookmarksList" class="space-y-2">
+      <!-- Bookmarks will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
