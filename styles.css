@@ -1,0 +1,117 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #4a5568;
+}
+
+/* Smooth transitions */
+* {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bookmark-item {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Drag and drop styles */
+.sortable-ghost {
+    opacity: 0.5;
+    background-color: #e2e8f0;
+}
+
+.dark .sortable-ghost {
+    background-color: #2d3748;
+}
+
+.sortable-drag {
+    opacity: 0.9;
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Category tags */
+.category-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #e2e8f0;
+    color: #4a5568;
+}
+
+.dark .category-tag {
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+/* Custom buttons */
+button {
+    transition: all 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Search bar focus styles */
+#searchBar:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #4299e1;
+}
+
+/* Bookmark hover effects */
+.bookmark-item:hover {
+    transform: translateY(-1px);
+}
+
+/* Loading animation */
+.loading {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Toast notifications */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: #48bb78;
+    color: white;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
